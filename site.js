@@ -100,13 +100,58 @@
     });
   }
 
+  /* Videos: a YouTube video ID in data-yt sets the link and loads the thumbnail; with no ID the card shows an "add a link" placeholder */
+  document.querySelectorAll('[data-yt]').forEach(function (a) {
+    var id = (a.getAttribute('data-yt') || '').trim();
+    var box = a.classList.contains('alt') ? a : a.querySelector('.vd-img');
+    if (id) {
+      a.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(id);
+      var im = document.createElement('img');
+      im.alt = ''; im.loading = 'lazy'; im.decoding = 'async';
+      im.src = 'https://i.ytimg.com/vi/' + encodeURIComponent(id) + '/hqdefault.jpg';
+      box.insertBefore(im, box.firstChild);
+    } else if (box) {
+      label(box, 'Add a YouTube link');
+      a.addEventListener('click', function (e) { e.preventDefault(); });
+    }
+  });
+
+  /* Home: Featured albums / Featured videos tabs that slide over */
+  var tabs = document.querySelectorAll('.ftabs [role="tab"]'), track = document.querySelector('.ftrack'), fview = document.querySelector('.fview');
+  if (tabs.length && track && fview) {
+    var panels = [document.getElementById('pn-albums'), document.getElementById('pn-videos')];
+    var cur = 0;
+    var fit = function () { var h = panels[cur].offsetHeight; if (h) fview.style.height = (h + 44) + 'px'; };  // skip while the page is hidden (height 0)
+    var show = function (i, focus) {
+      cur = i;
+      tabs.forEach(function (t, k) { var on = k === i; t.classList.toggle('on', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1; });
+      panels.forEach(function (p, k) { p.setAttribute('aria-hidden', k === i ? 'false' : 'true'); if (k === i) p.removeAttribute('inert'); else p.setAttribute('inert', ''); });
+      track.classList.toggle('v', i === 1);
+      fit();
+      if (focus) tabs[i].focus();
+    };
+    tabs.forEach(function (t, k) {
+      t.addEventListener('click', function () { show(k); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); show(k === 0 ? 1 : 0, true); }
+      });
+    });
+    if (window.ResizeObserver) { var ro = new ResizeObserver(fit); panels.forEach(function (p) { ro.observe(p); }); }  // re-fit whenever content size changes (fonts, images, coming back to the page)
+    window.addEventListener('pageshow', fit);
+    window.addEventListener('resize', fit);
+    window.addEventListener('load', fit);
+    panels.forEach(function (p) { p.querySelectorAll('img').forEach(function (im) { im.addEventListener('load', fit); }); });
+    if (location.hash === '#videos') { show(1); } else { fit(); }
+    window.addEventListener('hashchange', function () { if (location.hash === '#videos') { show(1); } else if (location.hash === '#albums') { show(0); } });
+  }
+
   /* All-albums page: filter tabs */
   var fb = document.querySelectorAll('.filters button');
   fb.forEach(function (b) {
     b.addEventListener('click', function () {
       var f = b.getAttribute('data-f');
       fb.forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
-      document.querySelectorAll('.alt').forEach(function (t) { t.hidden = f !== 'all' && t.getAttribute('data-cat') !== f; });
+      (b.closest('section') || document).querySelectorAll('.alt, .vd[data-cat]').forEach(function (t) { t.hidden = f !== 'all' && t.getAttribute('data-cat') !== f; });
     });
   });
 

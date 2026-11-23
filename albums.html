@@ -18,6 +18,7 @@
     <nav aria-label="Main"><ul>
       <li><a href="index.html#skills">Skills</a></li>
       <li class="nv-al"><a href="albums.html">Albums</a></li>
+      <li class="nv-al"><a href="videos.html">Videos</a></li>
       <li><a href="index.html#work">Projects</a></li>
       <li><a href="index.html#awards">Awards</a></li>
       <li class="nv-contact"><a href="contact.html">Contact</a></li>
@@ -36,12 +37,18 @@
         <button type="button" class="on" data-f="all" aria-pressed="true">All</button>
         <button type="button" data-f="esports" aria-pressed="false">Esports</button>
         <button type="button" data-f="events" aria-pressed="false">Events</button>
+        <button type="button" data-f="lifestyle" aria-pressed="false">Lifestyle</button>
       </div>
       <!-- To add an album: copy an <a class="alt"> block, set data-cat (for example esports or events), the title, the Google Photos share link, and a cover at images/albums/<name>/cover.jpg (landscape, about 3:2). To add a filter tab, copy a button. -->
       <div class="alg">
       <a class="alt" data-cat="esports" href="https://photos.app.goo.gl/d2qjVAx8taKaibPC6" target="_blank" rel="noopener">
         <img src="images/albums/lis-2026/cover.jpg" alt="" style="object-position:22% 50%" loading="lazy" decoding="async">
         <span class="alt-txt"><b>LiS Grand Finals 2026</b><i>Esports · Oct 10–12, 2026 · 66 photos</i></span>
+        <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      </a>
+      <a class="alt" data-cat="lifestyle" href="https://photos.app.goo.gl/tnVtNDZzXQ5rCnQa6" target="_blank" rel="noopener">
+        <img src="images/albums/alberta-2026/cover.jpg" alt="" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>Alberta 2026</b><i>Lifestyle · Aug 2026</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
       <a class="alt" data-cat="events" href="https://photos.app.goo.gl/BAirNBNENMz6Ticj6" target="_blank" rel="noopener">
@@ -54,64 +61,59 @@
         <span class="alt-txt"><b>Frag @ St. Clair 2026</b><i>Esports · July 10–12, 2026 · 127 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="esports" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/osea-2026/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>OSEA 2026</b><i>Esports · 40 photos</i></span>
+      <a class="alt" data-cat="esports" href="https://photos.google.com/share/AF1QipNt0D9s24f5D60MiEDJ8AFQdbcx-3ZL5i1eV_1b_-CYSlSQ2hL6Azq5NX3BLFhYmg?key=T2ZLYVROWGlKZ3dIRzJmc24wX1M5NWhHakdsRVZn" target="_blank" rel="noopener">
+        <img src="images/albums/osea-2026/cover.jpg" alt="" style="object-position:50% 50%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>OSEA 2026</b><i>Esports · May 23, 2026 · 40 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="esports" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/pressure-point-2026/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>Pressure Point 2026</b><i>Esports · 66 photos</i></span>
+      <a class="alt" data-cat="esports" href="https://photos.google.com/share/AF1QipP0-eRhYcVZF797ZTDW_MJPzRC9UOYzeSh2Pz6D2n5G753JVnLWeYphOdqllYvVBg?key=SURucV81WEppZEhyQzZ4TEVka1hKSW5LeUtDTDBn" target="_blank" rel="noopener">
+        <img src="images/albums/pressure-point-2026/cover.jpg" alt="" style="object-position:50% 40%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>Pressure Point 2026</b><i>Esports · May 16, 2026 · 66 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="esports" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/ccl-2026-champs/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>CCL 2026 CHAMPS</b><i>Esports · 75 photos</i></span>
+      <a class="alt" data-cat="esports" href="https://photos.app.goo.gl/8pk7R8SZvr6cL2zy5" target="_blank" rel="noopener">
+        <img src="images/albums/ccl-2026-champs/cover.jpg" alt="" style="object-position:50% 40%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>CCL 2026 LAN Finals</b><i>Esports · May 2–4, 2026 · 75 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="events" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/sakura-anime-fest-2026/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>Sakura Anime Fest 2026</b><i>Events · 94 photos</i></span>
+      <a class="alt" data-cat="events" href="https://photos.app.goo.gl/FuT9Dk3FckCpmka98" target="_blank" rel="noopener">
+        <img src="images/albums/sakura-anime-fest-2026/cover.jpg" alt="" style="object-position:50% 50%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>Sakura Anime Fest 2026</b><i>Events · Apr 11, 2026 · 94 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="events" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/esports-banquet-2026/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>St. Clair Esports Banquet 2026</b><i>Events · 80 photos</i></span>
+      <a class="alt" data-cat="events" href="https://photos.app.goo.gl/WqLnnCoQn6pccmJD6" target="_blank" rel="noopener">
+        <img src="images/albums/esports-banquet-2026/cover.jpg" alt="" style="object-position:50% 30%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>St. Clair Esports Banquet 2026</b><i>Events · Apr 2, 2026 · 80 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="esports" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/wehsec-2026/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>WEHSEC 2026</b><i>Esports · 49 photos</i></span>
+      <a class="alt" data-cat="esports" href="https://photos.app.goo.gl/CCawEXCm4RqWuAGe8" target="_blank" rel="noopener">
+        <img src="images/albums/wehsec-2026/cover.jpg" alt="" style="object-position:50% 40%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>WEHSEC 2026</b><i>Esports · Mar 28, 2026 · 49 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="events" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/pokemon-day-nexus/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>Pokemon Day @ Nexus !!</b><i>Events · 86 photos</i></span>
+      <a class="alt" data-cat="events" href="https://photos.app.goo.gl/3eqn4gW6eRGVWiKDA" target="_blank" rel="noopener">
+        <img src="images/albums/pokemon-day-nexus/cover.jpg" alt="" style="object-position:50% 50%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>Pokemon Day @ St. Clair</b><i>Events · Feb 27, 2026 · 86 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="esports" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/lkdsb-winter-2025/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>LKDSB Winter 2025</b><i>Esports · 37 photos</i></span>
+      <a class="alt" data-cat="esports" href="https://photos.app.goo.gl/sBekEKXd3D2Y7QKu9" target="_blank" rel="noopener">
+        <img src="images/albums/lkdsb-winter-2025/cover.jpg" alt="" style="object-position:50% 50%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>LKDSB 2025</b><i>Esports · Dec 13, 2025 · 37 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="esports" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/txp-5/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>TXP 5</b><i>Esports · 103 photos</i></span>
+      <a class="alt" data-cat="esports" href="https://photos.app.goo.gl/RtGMnMhtyFZ5JvMU8" target="_blank" rel="noopener">
+        <img src="images/albums/txp-5/cover.jpg" alt="" style="object-position:50% 45%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>TXP 5</b><i>Esports · Nov 30, 2025 · 103 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="esports" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/frag19-st-clair/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>FRAG19 at St. Clair College</b><i>Esports · 181 photos</i></span>
+      <a class="alt" data-cat="esports" href="https://photos.app.goo.gl/WS1LuLhjbAWBPXb7A" target="_blank" rel="noopener">
+        <img src="images/albums/frag19-st-clair/cover.jpg" alt="" style="object-position:50% 30%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>Fragadelphia 19</b><i>Esports · Jul 17–20, 2025 · 181 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
-      <a class="alt" data-cat="esports" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/saints-gauntlet-series-sgs2025/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>Saints Gauntlet Series | #SGS2025</b><i>Esports · 494 photos</i></span>
-        <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-      </a>
-      <a class="alt" data-cat="events" href="https://photos.google.com/" target="_blank" rel="noopener">
-        <img src="images/albums/alberta-2026/cover.jpg" alt="" loading="lazy" decoding="async">
-        <span class="alt-txt"><b>Alberta 2026</b><i>Events</i></span>
+      <a class="alt" data-cat="esports" href="https://photos.app.goo.gl/X7LvvypQssWGw6Gz6" target="_blank" rel="noopener">
+        <img src="images/albums/saints-gauntlet-series-sgs2025/cover.jpg" alt="" style="object-position:50% 50%" loading="lazy" decoding="async">
+        <span class="alt-txt"><b>SGS 2025</b><i>Esports · 2025 · 494 photos</i></span>
         <span class="alt-go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
       </div>

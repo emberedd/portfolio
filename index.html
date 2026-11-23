@@ -18,6 +18,7 @@
     <nav aria-label="Main"><ul>
       <li><a href="#skills">Skills</a></li>
       <li class="nv-al"><a href="albums.html">Albums</a></li>
+      <li class="nv-al"><a href="videos.html">Videos</a></li>
       <li><a href="#work">Projects</a></li>
       <li><a href="#awards">Awards</a></li>
       <li class="nv-contact"><a href="contact.html">Contact</a></li>
@@ -88,28 +89,72 @@
 
 <section class="block feat" id="albums">
   <div class="wrap">
-    <p class="eyebrow">Featured albums</p>
-    <h2>Photo albums</h2>
-    <p class="intro">Recent galleries from the events I've shot. Each one opens in Google Photos.</p>
-    <!-- Featured albums: replace each href with the album's Google Photos share link, and add a cover photo at images/albums/<name>/cover.jpg (portrait, about 4:5). Copy an <a class="al"> block to add more. -->
-    <div class="als">
-      <a class="al" href="https://photos.app.goo.gl/d2qjVAx8taKaibPC6" target="_blank" rel="noopener" style="--r:-2deg">
-        <span class="al-tape" aria-hidden="true"></span>
-        <div class="al-img"><img src="images/albums/lis-2026/cover.jpg" alt="Champion trophies lined up at League Impact Series 2026" style="object-position:22% 50%" loading="lazy" decoding="async"></div>
-        <div class="al-cap"><h3>LiS Grand Finals 2026</h3><p class="al-date">Oct 10–12, 2026</p><span>Open album <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-      </a>
-      <a class="al" href="https://photos.app.goo.gl/BAirNBNENMz6Ticj6" target="_blank" rel="noopener" style="--r:1.4deg">
-        <span class="al-tape" aria-hidden="true"></span>
-        <div class="al-img"><img src="images/albums/the-summoning-2026/cover.jpg" alt="Cosplayers posing on stage at The Summoning 2026" style="object-position:55% 50%" loading="lazy" decoding="async"></div>
-        <div class="al-cap"><h3>The Summoning 2026</h3><p class="al-date">July 18, 2026</p><span>Open album <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-      </a>
-      <a class="al" href="https://photos.app.goo.gl/i5zb3TWGw64ADu737" target="_blank" rel="noopener" style="--r:-1deg">
-        <span class="al-tape" aria-hidden="true"></span>
-        <div class="al-img"><img src="images/albums/frag-st-clair-2026/cover.jpg" alt="A player focused on his screen at Frag @ St. Clair" style="object-position:40% 40%" loading="lazy" decoding="async"></div>
-        <div class="al-cap"><h3>Frag @ St. Clair 2026</h3><p class="al-date">July 10–12, 2026</p><span>Open album <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-      </a>
+    <span id="videos" class="vanchor"></span>
+    <h2 class="ftitle">Featured Work</h2>
+    <div class="ftabs" role="tablist" aria-label="Featured work">
+      <button type="button" role="tab" id="tab-albums" class="on" aria-selected="true" aria-controls="pn-albums">Albums</button>
+      <button type="button" role="tab" id="tab-videos" aria-selected="false" aria-controls="pn-videos" tabindex="-1">Videos</button>
     </div>
-    <div class="al-more"><a class="btn light" href="albums.html">View all albums</a></div>
+    <div class="fview">
+      <div class="ftrack">
+        <div class="fpanel" id="pn-albums" role="tabpanel" aria-labelledby="tab-albums">
+          <p class="intro">Recent galleries from the events I've shot. Each one opens in Google Photos.</p>
+        <!-- Featured albums: replace each href with the album's Google Photos share link, and add a cover photo at images/albums/<name>/cover.jpg (portrait, about 4:5). Copy an <a class="al"> block to add more. -->
+        <div class="als">
+          <a class="al" href="https://photos.app.goo.gl/d2qjVAx8taKaibPC6" target="_blank" rel="noopener" style="--r:-2deg">
+            <span class="al-tape" aria-hidden="true"></span>
+            <div class="al-img"><img src="images/albums/lis-2026/cover.jpg" alt="Champion trophies lined up at League Impact Series 2026" style="object-position:22% 50%" loading="lazy" decoding="async"></div>
+            <div class="al-cap"><h3>LiS Grand Finals 2026</h3><p class="al-date">Oct 10–12, 2026</p><span>Open album <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+          </a>
+          <a class="al" href="https://photos.app.goo.gl/BAirNBNENMz6Ticj6" target="_blank" rel="noopener" style="--r:1.4deg">
+            <span class="al-tape" aria-hidden="true"></span>
+            <div class="al-img"><img src="images/albums/the-summoning-2026/cover.jpg" alt="Cosplayers posing on stage at The Summoning 2026" style="object-position:55% 50%" loading="lazy" decoding="async"></div>
+            <div class="al-cap"><h3>The Summoning 2026</h3><p class="al-date">July 18, 2026</p><span>Open album <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+          </a>
+          <a class="al" href="https://photos.app.goo.gl/i5zb3TWGw64ADu737" target="_blank" rel="noopener" style="--r:-1deg">
+            <span class="al-tape" aria-hidden="true"></span>
+            <div class="al-img"><img src="images/albums/frag-st-clair-2026/cover.jpg" alt="A player focused on his screen at Frag @ St. Clair" style="object-position:40% 40%" loading="lazy" decoding="async"></div>
+            <div class="al-cap"><h3>Frag @ St. Clair 2026</h3><p class="al-date">July 10–12, 2026</p><span>Open album <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+          </a>
+        </div>
+        <div class="al-more"><a class="btn light" href="albums.html">View all albums</a></div>
+        </div>
+        <div class="fpanel" id="pn-videos" role="tabpanel" aria-labelledby="tab-videos" aria-hidden="true" inert>
+          <p class="intro">A few edits I'm proud of. Each one plays on YouTube.</p>
+          <!-- Featured videos: for each card paste the YouTube video ID into data-yt (the part after v= in the link), then edit the title, the meta line, your role(s) and the short description. The thumbnail loads from YouTube by itself. -->
+          <div class="vds">
+            <a class="vd" data-yt="" href="https://www.youtube.com/" target="_blank" rel="noopener">
+              <div class="vd-img"><span class="vd-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+              <div class="vd-cap">
+                <h3>Video title 1</h3>
+                <p class="al-date">Category · Date</p>
+                <p class="vd-role"><b>My role</b> Editor · Motion graphics · Colour</p>
+                <p class="vd-desc">What this video was for, what I accomplished, and what I did on it. Replace this with 2 to 3 sentences.</p>
+              </div>
+            </a>
+            <a class="vd" data-yt="" href="https://www.youtube.com/" target="_blank" rel="noopener">
+              <div class="vd-img"><span class="vd-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+              <div class="vd-cap">
+                <h3>Video title 2</h3>
+                <p class="al-date">Category · Date</p>
+                <p class="vd-role"><b>My role</b> Editor · Motion graphics · Colour</p>
+                <p class="vd-desc">What this video was for, what I accomplished, and what I did on it. Replace this with 2 to 3 sentences.</p>
+              </div>
+            </a>
+            <a class="vd" data-yt="" href="https://www.youtube.com/" target="_blank" rel="noopener">
+              <div class="vd-img"><span class="vd-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+              <div class="vd-cap">
+                <h3>Video title 3</h3>
+                <p class="al-date">Category · Date</p>
+                <p class="vd-role"><b>My role</b> Editor · Motion graphics · Colour</p>
+                <p class="vd-desc">What this video was for, what I accomplished, and what I did on it. Replace this with 2 to 3 sentences.</p>
+              </div>
+            </a>
+          </div>
+          <div class="al-more"><a class="btn light" href="videos.html">Video portfolio</a></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -121,23 +166,14 @@
     <div class="cards">
       <a class="pcard" href="team-canada-owwc-2026.html" style="--c:#E4312B;--cf:#fff;--r:-2deg">
         <div class="pc-in">
-          <div class="pc-img"><img src="images/team-canada/card.jpg" alt="" loading="lazy" decoding="async"><span class="pc-tag">Lead Editor and Social Media Manager</span></div>
+          <div class="pc-img"><img src="images/team-canada/card.jpg" alt="" loading="lazy" decoding="async"><span class="pc-tag">Lead Editor and Social Media Manager</span><span class="pc-date">2026</span></div>
           <div class="pc-cap"><h3>Team Canada, Overwatch World Cup 2026</h3><span class="pc-go" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          <span class="pc-foil" aria-hidden="true"></span>
         </div>
       </a>
       <a class="pcard" href="st-clair-saints.html" style="--c:#A9C9B4;--cf:#161310;--r:1.2deg">
         <div class="pc-in">
-          <div class="pc-img"><img src="images/st-clair-saints/card.jpg" alt="" loading="lazy" decoding="async"><span class="pc-tag">Marketing and Events Coordinator</span></div>
+          <div class="pc-img"><img src="images/st-clair-saints/card.jpg" alt="" loading="lazy" decoding="async"><span class="pc-tag">Marketing and Events Coordinator</span><span class="pc-date">2023 &ndash; Present</span></div>
           <div class="pc-cap"><h3>St. Clair Saints Esports</h3><span class="pc-go" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          <span class="pc-foil" aria-hidden="true"></span>
-        </div>
-      </a>
-      <a class="pcard" href="esports-canada-enc-2027.html" style="--c:#E8C26A;--cf:#161310;--r:-1deg">
-        <div class="pc-in">
-          <div class="pc-img"><img src="images/esports-canada-enc-2027/card.jpg" alt="" loading="lazy" decoding="async"><span class="pc-tag">Marketing and Events Coordinator</span></div>
-          <div class="pc-cap"><h3>Esports Canada, ENC 2027</h3><span class="pc-go" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          <span class="pc-foil" aria-hidden="true"></span>
         </div>
       </a>
     </div>
