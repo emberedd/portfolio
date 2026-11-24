@@ -217,7 +217,8 @@ section.block.awards{background:#D6C39B}
 .rbar::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 40%,rgba(255,255,255,.65) 50%,transparent 60%);transform:translateX(-100%)}
 .ticker{margin:-6px 0 -10px;line-height:0}
 #skills{border-top:0}
-.ticker svg{display:block;width:100%;height:max(84px,7.22vw)}
+.ticker{overflow-x:clip}
+.ticker svg{display:block;width:100%;height:max(84px,7.22vw);overflow:visible}
 .ticker .body{fill:none;stroke:var(--ink);stroke-width:64}
 .ticker .hole{fill:none;stroke:#E8C26A;stroke-width:9;stroke-dasharray:11 14}
 .ticker text{font-family:var(--display);font-weight:700;font-size:19px;fill:var(--sand);letter-spacing:.02em}
